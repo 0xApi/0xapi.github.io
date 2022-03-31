@@ -1,0 +1,31 @@
+body {
+	background-color: #212529
+	background-size: cover;
+}
+
+h3 {
+	text-align: center;
+	color: darkgray;
+	font-family: fantasy;
+}
+.card {
+	margin-top: 10px;
+	float: left;
+}
+
+.mytitle {
+	margin-top: 10px;
+	margin-left: 20px;
+	display: inline-block;
+	font-family: fantasy;
+	color: whitesmoke;
+	border-bottom: 2px solid whitesmoke;
+}
+nav {
+	border-bottom: 2px solid grey;
+}
+.card {
+	color: whitesmoke;
+	background-color: #212529;
+	border: dimgrey solid;
+}

@@ -1,0 +1,29 @@
+body {
+	background-color: #212529;
+	color: #e6e6e6; 
+	font-family: fantasy;
+}
+
+nav {
+	border-bottom: 2px solid grey;
+}
+
+
+.accordion-body {
+	background-color: #212529;
+	color: #e6e6e6; 
+
+}
+
+
+.accordion-item, img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flag {
+	color: lightblue;
+	font-weight: bold;
+	font-style: italic;
+}

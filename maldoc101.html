@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MalDoc101 Analysis</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="style-maldoc.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	  		<div class="container-fluid">
+	    		<a class="navbar-brand" href="index.html">0xAPI</a>
+	    			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	      				<span class="navbar-toggler-icon"></span>
+	    			</button>
+	    	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+	      		<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+	        		<li class="nav-item">
+	          			<a class="nav-link active" aria-current="page" href="index.html">Home</a>
+	        		</li>
+	        		<li class="nav-item">
+	          			<a class="nav-link" href="#">WriteUps</a>
+	        		</li>
+	        	</ul>
+		        <form class="d-flex">
+		        	<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+		        	<button class="btn btn-outline-success" type="submit">Search</button>
+		        </form>
+		    </div>
+	    </div>
+	</nav>
+	<br>
+	<header>
+		<h4>This is <a href="https://cyberdefenders.org/blueteam-ctf-challenges/51">'MalDoc101'</a> challenge from Cyberdefenders.org</h4>
+	</header> 
+	<p>
+		<h4>Environment and Tools:</h4>
+			<ul>
+				<li>Windows 10 VM</li>
+				<li>Access to VirusTotal.com</li>
+				<li>Oletools: Oledump, Olevba</li>
+				<li>Text Editor</li>
+				<li>CyberChef</li> 
+			</ul>
+	</p>
+	<div class="accordion " id="accordionPanelsStayOpenExample">
+	  	<div class="accordion-item" style="width:90%">
+		    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+		    	<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+		        1. Multiple streams contain macros in this document. Provide the number of highest one.
+		        </button>
+		    </h2>
+		    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
+		        <div class="accordion-body">
+		        	<strong>Open Command window</strong> and type this command after installing Oletools and <em>adding them to Path</em>:<br>
+					<code>oledump.py sample.bin</code><br>
+					The answer is <span class="flag">16</span><br>
+					N.B. Actually stream 16 does not contain macro, it's just an attribute to macro. The ones that contain macros are those with 'Capital M' 13 & 15<br>
+					<img src="New folder/1 - Copy.jpg" width="400px" height="400px" >
+		        </div>
+		    </div>
+	    </div>
+	    <div class="accordion-item" style="width:90%">
+		    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+		        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+		        	2. What event is used to begin the execution of the macros?<br>
+					4. What stream is responsible for the storage of the base64-encoded string?<br>
+					5. This document contains a user-form. Provide the name?
+		        </button>
+		    </h2>
+		    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+		        <div class="accordion-body">
+		        	<code>olevba.exe sample.bin</code><br>
+		        	Check the output to find that:<br>
+					Flag 2: <span class="flag">Document_open</span><br>
+					<img src="New Folder/2 - Copy.jpg"><br>
+					Here is the name of the stream that contains the encoded strings, Search for it in the output of Oledump to find that it's <span class="flag">stream number 34</span><br>
+					<img src="New Folder/3 - Copy.jpg"><br><br>
+					<img src="New Folder/4 - Copy.jpg"><br>
+					Flag 5: <span class="flag">'roubhaol'</span> (Actually I guessed this answer)
+		        </div>
+		    </div>
+	    </div>
+	    <div class="accordion-item" style="width:90%">
+		    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+		      	<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+		        3. What malware family was this maldoc attempting to drop?
+		    	</button>
+		    </h2>
+		    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+		        <div class="accordion-body">
+		        	I searched strings to find any clue for the family but I failed, so I used the first hint to find that I should google it!<br>
+					Submit the sample or its hash to VirusTotal.com<br>
+					The family is <span class="flag">'Emotet'</span><br>
+					<img src="New Folder/7 - Copy.jpg" width=70%><br>
+		        </div>
+		    </div>
+	    </div>
+	    <div class="accordion-item" style="width:90%">
+		    <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+		        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+		        6. This document contains an obfuscated base64 encoded string; what value is used to pad (or obfuscate) this string?
+		        </button>
+		    </h2>
+		    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+		        <div class="accordion-body">
+		        Copy the stream where the base64-encoded string is found (from the output of olevba) and paste it into text editor. It's obvious that this is a repetitive sequence <span class="flag">'2342772g3&*gs7712ffvs626fq'</span> used to obfuscate the string.
+		        </div>
+		    </div>
+	    </div>
+	    <div class="accordion-item" style="width:90%">
+		    <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+		        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+		        7. What is the program executed by the base64 encoded string?<br>
+				8. What WMI class is used to create the process to launch the trojan?<br>
+				9. Multiple domains were contacted to download a trojan. Provide first FQDN as per the provided hint.<br>
+		        </button>
+		    </h2>
+		    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFive">
+		        <div class="accordion-body">
+		        Use CyberChef to remove the repetitive sequence. We can see that <span class="flag">'Powershell'</span> is used to invoke base64-encoded command.<br><br>
+				<img src="New Folder/5 - Copy.jpg" width=80%><br>
+				Copy the encoded string and use CyberChef again with this recipe to decode it.<br><br>
+				<img src="New Folder/6 - Copy.jpg" width=80%><br>
+				So the WMI class is <span class="flag">'win32_process'</span><br>
+				First domain: <span class="flag">'haoqunkong.com'</span><br> 
+		        </div>
+		    </div>
+	    </div>
+	</div>
+</body>
+</html>
+
+
+
+
