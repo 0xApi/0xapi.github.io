@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ransomed Analysis</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="style-ransomed.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	  		<div class="container-fluid">
+	    		<a class="navbar-brand" href="index.html">0xAPI</a>
+	    			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	      				<span class="navbar-toggler-icon"></span>
+	    			</button>
+	    	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+	      		<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+	        		<li class="nav-item">
+	          			<a class="nav-link active" aria-current="page" href="index.html">Home</a>
+	        		</li>
+	        		<li class="nav-item">
+	          			<a class="nav-link" href="#">WriteUps</a>
+	        		</li>
+	        	</ul>
+		        <form class="d-flex">
+		        	<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+		        	<button class="btn btn-outline-success" type="submit">Search</button>
+		        </form>
+		    </div>
+	    </div>
+	</nav>
+	<br>
+	<header>
+		<h6>This is my solution for <a href="https://cyberdefenders.org/blueteam-ctf-challenges/87">'Ransomed'</a> challenge from Cyberdefenders.org</h6>
+	</header> 
+	<h2>Answers</h2>
+	<p> We can answer the first four questions by loading the sample into PeStudio</p>
+	<img src="ransomed/1.jpg" width=50%> <br>
+	<img src="ransomed/2.jpg" width=50%> <br>
+
+
+	<div class="accordion " id="accordionPanelsStayOpenExample">
+	  	<div class="accordion-item" style="width:90%">
+		    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+		    	<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+		        1. What is the md5 hash of the file?
+		        </button>
+		    </h2>
+		    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
+		        <div class="accordion-body">
+		        	<span class="flag">A2F33095EF25B4D5B061EB53A7FE6548</span><br>
+		        </div>
+		    </div>
+	    </div>
+
+	    <div class="accordion-item" style="width:90%">
+		    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+		        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+		        	2. What is the value of entropy?
+		        </button>
+		    </h2>
+		    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+		        <div class="accordion-body">
+		        	<span class="flag">7.677</span><br>
+		        </div>
+		    </div>
+	    </div>
+	    
+	    <div class="accordion-item" style="width:90%">
+		    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+		      	<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+		        3. What is the number of sections?
+		    	</button>
+		    </h2>
+		    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+		        <div class="accordion-body">
+		        	<span class="flag">4</span><br>
+				</div>
+		    </div>
+	    </div>
+	    
+	    <div class="accordion-item" style="width:90%">
+		    <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+		        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+		        6. What is the entropy of the .text section?
+		        </button>
+		    </h2>
+		    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+		        <div class="accordion-body">
+		        	<span class="flag">7.844</span>
+		        </div>
+		    </div>
+	    </div>
+	    
+	    <div class="accordion-item" style="width:90%">
+		    <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+		        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+		        5. What is the name of the technique used to obfuscate string?
+		        </button>
+		    </h2>
+		    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFive">
+		        <div class="accordion-body">
+		        Load the sample into Ghidra<br>
+				Usually malware authors try to hide the names of critical modules and functions.<br>
+				I started by looking around 'LoadLibraryW' function at address 0049c870.. before it there is two function calls.. The first of them calls FUN_0049bee0<br>
+				<img src="ransomed/3.jpg" width=80%> <br>
+				<img src="ransomed/4.jpg" width=80%> <br>
+
+				After this address 0049bee0 there is multiple PUSHes (MOV to the stack), All the pushed values range between hex 20 and 7f ,  so they are mostly ASCII characters.<br>
+
+				After converting them to char/char stream, we will discover that the malware tries to GetModuleHandle of Kernel32.dll then GetProcAddress of VirtualProtect.<br> 
+				This technique of obfuscating strings by pushing chars on the stack is called <span class="flag">"Stack Strings"</span><br>
+				Then I loaded the sample into x32dbg
+		        </div>
+		    </div>
+	    </div>
+
+	    <div class="accordion-item" style="width:90%">
+		    <h2 class="accordion-header" id="panelsStayOpen-headingsix">
+		        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsesix" aria-expanded="false" aria-controls="panelsStayOpen-collapsesix">
+		        6. What is the API that used malware allocated memory to write shellcode?
+		        </button>
+		    </h2>
+		    <div id="panelsStayOpen-collapsesix" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingsix">
+		        <div class="accordion-body">
+					<span class="flag"> VirtualAlloc</span><br> 
+		        </div>
+		    </div>
+	    </div>
+
+	    <div class="accordion-item" style="width:90%">
+		    <h2 class="accordion-header" id="panelsStayOpen-headingseven">
+		        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseseven" aria-expanded="false" aria-controls="panelsStayOpen-collapseseven">
+		        7. What is the protection of allocated memory?
+		        </button>
+		    </h2>
+		    <div id="panelsStayOpen-collapseseven" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingseven">
+		        <div class="accordion-body">
+		        	Go to VirtualAlloc function by pressing Ctrl+G then type 'VirtualAlloc'<br>
+					Double click the jmp after it<br>
+					follow the function till its end and set a break point at the address 75C54AC0 'ret 10'<br>
+					run the sample<br>
+					EAX contains the return value of VirtualAlloc , which is the address of the allocated memory >> follow it in dump >> right click >><br> follow in memory map >> you will see that the protection is <span class="flag">"ERW"</span><br>
+					Also you can check the parameters of VirtualAlloc, you will see that the value 0x40 is pushed on the stack<br>
+					0x40 is a memory protection constant that means PAGE_EXECUTE_READWRITE<br>
+					<img src="ransomed/5.jpg" width=80%> <br>
+					<img src="ransomed/6.jpg" width=70%> <br>
+
+		        </div>
+		    </div>
+	    </div>
+
+	    <div class="accordion-item" style="width:90%">
+		    <h2 class="accordion-header" id="panelsStayOpen-headingeight">
+		        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseeight" aria-expanded="false" aria-controls="panelsStayOpen-collapseeight">
+		        8. What assembly instruction is used to transfer execution to the shellcode?
+		        </button>
+		    </h2>
+		    <div id="panelsStayOpen-collapseeight" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingeight">
+		        <div class="accordion-body">
+			        Now we know the address of the allocated memory for the shellcode (the return value of VirtualAlloc), so we should look for a call or a jump to it.<br>
+					After 19 instructions you will find the jump to the shellcode.<br>
+					The instruction is <span class="flag">"jmp dword ptr ss:[ebp-4]"</span><br> 
+		        </div>
+		    </div>
+	    </div>
+
+	    <div class="accordion-item" style="width:90%">
+		    <h2 class="accordion-header" id="panelsStayOpen-headingNine">
+		        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseNine" aria-expanded="false" aria-controls="panelsStayOpen-collapseNine">
+				9. What is the number of functions the malware resolves from kernel32?
+		        </button>
+		    </h2>
+		    <div id="panelsStayOpen-collapseNine" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingNine">
+		        <div class="accordion-body">
+		       		Follow the address of the shellcode in dump >> right click >> follow in memory map >> right click >> dump memory to file<br><br>
+					<img src="ransomed/8.jpg" width=60%> <br>
+					Then load the dumped shellcode into Scdbg and launch it.<br>
+					The malware resolves a function from a module by calling GetProcAddress<br>
+					<ul>These are the functions that belong to kernel32 and were called by the malware:
+						<li>WinExec</li>
+						<li>CreateFileA</li>
+						<li>WriteFile</li>
+						<li>CloseHandle</li>
+						<li>CreateProcessA</li>
+						<li>GetThreadContext</li>
+						<li>VirtualAlloc</li>
+						<li>VirtualAllocEx</li>
+						<li>VirtualFree</li>
+						<li>ReadProcessMemory</li>
+						<li>WriteProcessMemory</li>
+						<li>SetThreadContext</li>
+						<li>ResumeThread</li>
+						<li>WaitForSingleObject</li>
+						<li>GetModuleFileNameA</li>
+						<li>GetCommandLineA</li>
+					</ul>
+					so the answer is <span class="flag">16</span><br><br>
+					<img src="ransomed/9.jpg" width=80%> <br><br>
+
+		        </div>
+		    </div>
+	    </div>
+
+	    <div class="accordion-item" style="width:90%">
+		    <h2 class="accordion-header" id="panelsStayOpen-headingTen">
+		        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTen" aria-expanded="false" aria-controls="panelsStayOpen-collapseTen">
+		        10. The malware obfuscates two strings after calling RegisterClassExA. What is the first string?
+		        </button>
+		    </h2>
+		    <div id="panelsStayOpen-collapseTen" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTen">
+		        <div class="accordion-body">
+		        	Go to RegisterClassExA (by Ctrl+G and type registerclassexa), set bp and run the sample >> run till user code >> then you will find the strings on the stack<br>
+					<img src="ransomed/10.jpg" width=80%> <br>
+					The answer is <span class="flag">"saodkfnosa9uin"</span> 
+		        </div>
+		    </div>
+	    </div>
+
+	    <div class="accordion-item" style="width:90%">
+		    <h2 class="accordion-header" id="panelsStayOpen-headingEleven">
+		        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseEleven" aria-expanded="false" aria-controls="panelsStayOpen-collapseEleven">
+		        11. What is the value of dwCreationFlags of CreateProcessA?<br>
+				12. Malware uses a process injection technique. What is the name of it?<br>
+				13. What is the API used to write the payload into the target process?<br>
+		        </button>
+		    </h2>
+		    <div id="panelsStayOpen-collapseEleven" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingEleven">
+		        <div class="accordion-body">
+		        set a break point at CreateProcessA >> run till it >> examine the stack and you will find that the value of dwCreationFlags is <span class="flag">"0x04"</span><br><br>
+				<img src="ransomed/11.jpg" width=25%> <br>
+				This value means "Create new process in Suspended mode" which is used by malware authors for injection technique called <span class="flag">"Process Hollowing"</span> by doing something like a brain transplant to this new suspended process by evacuating its code then injecting malicious code.<br>
+				<ol>This is the usual API pattern of Process Hollowing:
+				    <li>CreateProcess in suspended state</li>
+    				<li>NtUnmapViewOfSection</li>
+    				<li>VirtualAllocEx</li>
+    				<li><span class="flag">WriteProcessMemory</span></li>
+    				<li>ResumeThread</li>
+				</ol>
+				you may find these functions or their variants staring with Nt/Zw/Rtl
+		        </div>
+		    </div>
+	    </div>
+	</div>
+</body>
+</html>
+
+
+
+
