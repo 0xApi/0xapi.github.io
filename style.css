@@ -5,7 +5,7 @@ body {
 h3 {
 	text-align: center;
 	color: darkgray;
-	font-family: "Comic Sans MS", "Comic Sans", cursive;
+	font-family: Monospace;
 }
 .card {
 	margin-top: 10px;
@@ -16,7 +16,7 @@ h3 {
 	margin-top: 10px;
 	margin-left: 20px;
 	display: inline-block;
-	font-family: "Comic Sans MS", "Comic Sans", cursive;
+	font-family: Monospace;
 	color: whitesmoke;
 	border-bottom: 2px solid whitesmoke;
 }
@@ -27,5 +27,5 @@ nav {
 	color: whitesmoke;
 	background-color: #212529;
 	border: dimgrey solid;
-	font-family: "Comic Sans MS", "Comic Sans", cursive;
+	font-family: Monospace;
 }
